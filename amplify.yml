@@ -10,3 +10,5 @@ frontend:
       commands: [yarn build]
   artifacts:
     baseDirectory: public/
+    files:
+      - '**/*'
