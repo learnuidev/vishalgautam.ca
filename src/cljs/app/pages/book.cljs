@@ -6,11 +6,11 @@
     :href "/book"}
    {:title "Basic Server with Ring"
     :href "/book"}
-   {:title "Data Driven Architecture Integrant"
+   {:title "Data Driven Architecture with Integrant"
     :href "/book"}
    {:title "Routing with Reitit"
     :href "/book"}
-   {:title "Introduction Datomic"
+   {:title "Introduction to Datomic, an Immutable Database"
     :href "/book"}
    {:title "Deploying our Application using Datomic Ion"
     :href "/book"}
