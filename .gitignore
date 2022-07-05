@@ -3,6 +3,7 @@
 .lsp
 node_modules
 public/js
+src/gen
 
 
 #amplify-do-not-edit-begin
