@@ -21,7 +21,7 @@
 
 (defn book-page []
   [:div.mx-8.my-16.md:mx-64
-   [:h1.text-4xl.font-bold.flex.items-center.justify-center "Contents"]
+   [:h1.text-4xl.font-bold.font-display.flex.items-center.justify-center "Contents"]
    [:div.mt-8.space-y-7
     (for [{:keys [title href]} contents]
      ^{:key title}
