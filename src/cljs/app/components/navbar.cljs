@@ -28,6 +28,4 @@
     [:p.mx-4 {:class [(when (is-active? @routes-state :routes/tutorials) "font-medium")]}
      [:a {:href "/tutorials"} "tutorials"]]
     [:p.mx-4 {:class [(when (is-active? @routes-state :routes/book) "font-medium")]}
-     [:a {:href "/book"} "immutable stack"]]
-    [:p.mx-4  {:class [(when (is-active? @routes-state :routes/login) "font-medium")]}
-     [:a {:href "/login"} "login"]]]])
+     [:a {:href "/book"} "immutable stack"]]]])
