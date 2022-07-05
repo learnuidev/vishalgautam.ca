@@ -17,7 +17,7 @@
 
 
 (defn navbar []
-  [:nav.m-8.flex.justify-between.items-stretch.items-center.md:mx-32.my-16
+  [:nav.m-8.flex.justify-between.items-stretch.items-center.md:mx-64.my-16
    ; A/B testing
    #_[:a {:href "/"} "ema"]
    [:a {:href "/"}
