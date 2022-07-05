@@ -25,9 +25,9 @@
    #_[:a {:href "/"}
       [:img.h-8 {:src "img/hot.png"}]]
    [:div.flex.grid-gap-2
-    [:p.mx-4 {:class [(when (is-active? @routes-state :routes/how) "font-medium")]}
+    [:p.mx-4 {:class [(when (is-active? @routes-state :routes/tutorials) "font-medium")]}
      [:a {:href "/tutorials"} "tutorials"]]
-    [:p.mx-4 {:class [(when (is-active? @routes-state :routes/restaurants) "font-medium")]}
+    [:p.mx-4 {:class [(when (is-active? @routes-state :routes/book) "font-medium")]}
      [:a {:href "/book"} "immutable stack"]]
     [:p.mx-4  {:class [(when (is-active? @routes-state :routes/login) "font-medium")]}
      [:a {:href "/login"} "login"]]]])
