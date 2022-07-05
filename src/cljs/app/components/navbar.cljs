@@ -17,11 +17,11 @@
 
 
 (defn navbar []
-  [:nav.m-8.flex.justify-between.items-stretch.items-center
+  [:nav.m-8.flex.justify-between.items-stretch.items-center.md:mx-32.my-16
    ; A/B testing
    #_[:a {:href "/"} "ema"]
    [:a {:href "/"}
-    [:img.h-8 {:src "img/pepper.png"}]]
+    [:img.h-8.md:h-12 {:src "img/pepper.png"}]]
    #_[:a {:href "/"}
       [:img.h-8 {:src "img/hot.png"}]]
    [:div.flex.grid-gap-2

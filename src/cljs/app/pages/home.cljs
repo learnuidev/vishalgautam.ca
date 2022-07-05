@@ -2,10 +2,10 @@
   (:require ["/components/Anchor" :refer [Anchor]]))
 
 (defn splash-page []
- [:div.mx-8.my-16.md:mx-32
+ [:div.mx-8.my-32.md:mx-32
   [:section
-   [:h1.text-7xl.text-bold.font-display "Vishal Gautam"]
-   [:h3.text-3xl.mt-4.font-body "Software Engineer"]]
+   [:h1.text-5xl.text-bold.font-display.md:text-7xl "Vishal Gautam"]
+   [:h3.text-2xl.mt-4.font-body.md:text-3xl "Software Engineer"]]
   [:section.mt-24
    [:h1.text-4xl.font-display "Tutorials"]
    [:ul.mt-8.mx-8
