@@ -1,7 +1,10 @@
 (ns app.core
   "This namespace contains your application and is the entrypoint for 'yarn start'."
   (:require [reagent.dom :as rdom]
+            [re-frame.core :as rf]
             [app.athens.db]
+            ;; events
+            [app.athens.events]
             ;; aws
             ; ["/aws/amplify" :as amplify]
             [app.amplify :as amp]
@@ -25,5 +28,6 @@
 (defn ^:export main
   "Run application startup logic."
   []
+  (rf/dispatch-sync [:boot true])
   (router-start!)
   (render))
