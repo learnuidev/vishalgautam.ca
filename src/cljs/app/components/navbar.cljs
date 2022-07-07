@@ -18,14 +18,10 @@
 
 (defn navbar []
   [:nav.m-8.flex.justify-between.items-stretch.items-center.md:mx-64.my-16
-   ; A/B testing
-   #_[:a {:href "/"} "ema"]
    [:a {:href "/"}
-    [:img.h-8.md:h-12 {:src "img/pepper.png"}]]
-   #_[:a {:href "/"}
-      [:img.h-8 {:src "img/hot.png"}]]
+    [:p.text-bold.font-display.text-lg "V"]]
    [:div.flex.grid-gap-2
     [:p.text-xl.mx-4 {:class [(when (is-active? @routes-state :routes/tutorials) "font-medium")]}
      [:a {:href "/tutorials"} "tutorials"]]
     [:p.text-xl.mx-4 {:class [(when (is-active? @routes-state :routes/book) "font-medium")]}
-     [:a {:href "/book"} "immutable stack"]]]])
+     [:a {:href "/books/immutable-stack"} "immutable stack"]]]])

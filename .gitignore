@@ -26,3 +26,5 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
+
+immutable_stack_book_v1

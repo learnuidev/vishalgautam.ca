@@ -12,7 +12,9 @@
             [app.pages.register :refer [register-page]]
             [app.pages.settings :refer [settings-page]]
             [app.pages.profile :refer [profile-page]]
-            [app.pages.book :refer [book-page]]))
+            [app.pages.book :refer [book-page]]
+            [app.pages.books :refer [books-page]]
+            [app.pages.chapter :refer [chapter-page]]))
 
 
 (defonce routes-state (r/atom nil))
@@ -35,8 +37,12 @@
                  :view #'settings-page}]
    ["/resume" {:name :routes/resume
                :view #'resume-page}]
-   ["/book" {:name :routes/book
-             :view #'book-page}]
+   ["/books" {:name :routes/books
+              :view #'books-page}]
+   ["/books/:bookId" {:name :routes/book
+                      :view #'book-page}]
+   ["/books/:bookId/chapters/:chapterId" {:name :routes/chapter
+                                          :view #'chapter-page}]
    ["/tutorials" {:name :routes/tutorials
                   :view #'tutorials-page}]
    ["/user/:username" {:name :routes/profile
