@@ -28,7 +28,7 @@
 
 (defn app []
   [:> QueryClientProvider
-   [:div
+   [:div.font-body
     [navbar]
     (let [current-view (-> @routes-state :data :view)]
       [current-view @routes-state])]])

@@ -1,6 +1,7 @@
 (ns app.core
   "This namespace contains your application and is the entrypoint for 'yarn start'."
   (:require [reagent.dom :as rdom]
+            [app.athens.db]
             ;; aws
             ; ["/aws/amplify" :as amplify]
             [app.amplify :as amp]

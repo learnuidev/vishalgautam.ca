@@ -19,11 +19,10 @@
 
 (defn module-1 []
   [:section
-   [:div.mt-8.space-y-7
-    [quote-page {:href "https://www.amazon.ca/Antifragile-Things-That-Gain-Disorder/dp/0812979680"
-                 :book "Antifragile: Things That Gain from Disorder"
-                 :quotes ["A complex system, contrary to what people believe, does not require complicated systems and regulations and intricate policies. The simpler, the better. Complications lead to multiplicative chains of unanticipated effects. Because of opacity, an intervention leads to unforeseen consequences, followed by apologies about the “unforeseen” aspect of the consequences, then to another intervention to correct the secondary effects, leading to an explosive series of branching “unforeseen” responses, each one worse than the preceding one."
-                            "Yet simplicity has been difficult to implement in modern life because it is against the spirit of a certain brand of people who seek sophistication so they can justify their profession. Less is more and usually more effective. Thus I will produce a small number of tricks, directives, and interdicts—how to live in a world we don’t understand, or, rather, how to not be afraid to work with things we patently don’t understand, and, more principally, in what manner we should work with these. Or, even better, how to dare to look our ignorance in the face and not be ashamed of being human—be aggressively and proudly human. But that may require some structural changes."]}]]
+   [quote-page {:href "https://www.amazon.ca/Antifragile-Things-That-Gain-Disorder/dp/0812979680"
+                :book "Antifragile: Things That Gain from Disorder"
+                :quotes ["A complex system, contrary to what people believe, does not require complicated systems and regulations and intricate policies. The simpler, the better. Complications lead to multiplicative chains of unanticipated effects. Because of opacity, an intervention leads to unforeseen consequences, followed by apologies about the “unforeseen” aspect of the consequences, then to another intervention to correct the secondary effects, leading to an explosive series of branching “unforeseen” responses, each one worse than the preceding one."
+                           "Yet simplicity has been difficult to implement in modern life because it is against the spirit of a certain brand of people who seek sophistication so they can justify their profession. Less is more and usually more effective. Thus I will produce a small number of tricks, directives, and interdicts—how to live in a world we don’t understand, or, rather, how to not be afraid to work with things we patently don’t understand, and, more principally, in what manner we should work with these. Or, even better, how to dare to look our ignorance in the face and not be ashamed of being human—be aggressively and proudly human. But that may require some structural changes."]}]
    [:div.mt-8.space-y-7.max-w-4xl.leading-7
     [:p.text-md.tracking-wide.font-display "The main objective of this book is this: to give you a different point of view, when it comes to building web applications aka this book is about building simpler distributed systems."]]
    [:div.mt-8.space-y-7.max-w-4xl.leading-7
@@ -45,10 +44,9 @@
 (defn module-3 []
   [:section.mt-16
    [:h1.text-2xl.font-display.font-bold.text-center "What is Complexity"]
-   [:div.mt-8.space-y-7
-    [quote-page {:href "https://www.amazon.ca/Antifragile-Things-That-Gain-Disorder/dp/0812979680"
-                 :book "Out of the Tarpit"
-                 :quotes ["Unreliability, late delivery, lack of security — often even poor performance in large-scale systems can all be seen as deriving ultimately from unmanageable complexity."]}]]
+   [quote-page {:href "https://www.amazon.ca/Antifragile-Things-That-Gain-Disorder/dp/0812979680"
+                :book "Out of the Tarpit"
+                :quotes ["Unreliability, late delivery, lack of security — often even poor performance in large-scale systems can all be seen as deriving ultimately from unmanageable complexity."]}]
    [:div.mt-8.space-y-7.max-w-4xl.leading-7
     [:p.text-md.tracking-wide.font-display "In the classic paper “Out of the Tar Pit”, Ben Moseley and Peter Marks believe that complexity of the system is its own enemy. Complexity makes it hard to build software. They argue that complexity is the root cause of the vast majority of problems with software today."]]
    [:div.mt-8.space-y-7.max-w-4xl.leading-7
