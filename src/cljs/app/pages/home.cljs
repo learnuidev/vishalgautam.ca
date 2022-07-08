@@ -10,6 +10,10 @@
    [:h1.text-4xl.font-display "Tutorials"]
    [:ul.mt-8.mx-8
     [:h3.text-xl.mt-4.font-body
+     [:a {:href "https://www.youtube.com/watch?v=5ScNKhR_gWY&ab_channel=EngineeringwithV"
+          :target "_blank"}
+      "Build & Deploy a Serverless Node.js Express App to Google Cloud"]]
+    [:h3.text-xl.mt-4.font-body
      [:a {:href "https://www.youtube.com/watch?v=fgOfYyTeBaQ&ab_channel=EngineeringwithV"
           :target "_blank"}
       "Basic Clojure Server + Integrant"]]
