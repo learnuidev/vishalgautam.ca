@@ -64,6 +64,7 @@
    [:div.mt-8.space-y-7.max-w-4xl.leading-7
     [:p.text-md.tracking-wide.font-display "Clojure was his answer to functional level complexity, but what about system level."]]])
 
+
 (defn module-4 []
   [:section.mt-16
    [:h1.text-2xl.font-display.font-bold.text-center "Complexity at a System Scale"]
@@ -96,6 +97,64 @@
    [:div.mt-8.space-y-7.max-w-4xl.leading-7
     [:p.text-md.tracking-wide.font-display "Luckily we don't see such problems in Datomic, since its everything data - queries are data, transactions are reified, schema is data"]]])
 
+(defn module-5 []
+  [:section.mt-16
+   [:h1.text-2xl.font-display.font-bold.text-center "Complexity of Modern Stack"]
+   [:div.mt-8.space-y-7.max-w-4xl.leading-7
+    [:p.text-md.tracking-wide.font-display "To understand the true complexity of modern stack.
+      We have to look at from different perfectvie and from a differnt point of time."]
+    [:p.text-md.tracking-wide.font-display "First we will look at the individual technologies and explore their pros and cons."]
+    [:p.text-md.tracking-wide.font-display "We will also use tempo diagrams to visualize the growth in complexity (ref: Tempo, Venkatesh Rao) over time. More on tempo charts later :)"]]
+   [:div.mt-8.space-y-7.max-w-4xl.leading-7
+    [:p.text-lg.tracking-wide.font-display.font-bold "SQL"]
+    [:p.text-lg.tracking-wide.font-display "pros"]
+    [:ul.m-8.leading-10
+     [:li.font-display.ml-4 "Popular",]
+     [:li.font-display.ml-4 "Industry Standard",]
+     [:li.font-display.ml-4 "SQL relational language (declarative)"]
+     [:li.font-display.ml-4 "Easy to learn"]
+     [:li.font-display.ml-4 "Portable"]
+     [:li.font-display.ml-4 "Lots of Jobs - Highly desirable skill"]
+     [:li.font-display.ml-4 "Strongly Consistent"]
+     [:li.font-display.ml-4 "Transactions - ACID guranteees (MVCC architecture)"]]
+    [:p.text-lg.tracking-wide.font-display "Cons"]
+    [:ul.m-8.leading-10
+     [:li.font-display.ml-4 "Monolith"]
+     [:li.font-display.ml-4 "Manually manage indexes (hand code) leading to brittle systems"]
+     [:li.font-display.ml-4 "Read Transactions"]
+     [:li.font-display.ml-4 "Data normalization"]
+     [:li.font-display.ml-4 "Designed for situated programs NOT for distributed programs"]
+     [:li.font-display.ml-4 "Vulnerable to sql injection attacks"]
+     [:li.font-display.ml-4 "String based communication - brittle programs"]
+     [:li.font-display.ml-4 "Table, row and column names are not first class"]
+     [:li.font-display.ml-4 "Manually manage database updates, patches etc"]
+     [:li.font-display.ml-4 "Complex Queries"]
+     [:li.font-display.ml-4 "Impledence Mismatch"]
+     [:li.font-display.ml-4 "Not Cloud Native"]
+     [:li.font-display.ml-4 "Client/Server architecture"]
+     [:li.font-display.ml-4 "Mutable - creates problems that you dont have (data corruption)"]]
+    [:p.text-md.tracking-wide.font-display "Designed during 1970's when the storage and compute verry expensive. Now price of memory and storage is 10^6x cheaper than in the 1970s (SQL was invented around that time). Lets think about that for a second : Storage and Memory are 1,000,000x cheaper than during the 1970s. Yet, database still work as if storage and memory are sacred resources. Now imagine if you apply the same rules else where. Imagine if the size of the sun grows by the factor of 1 MILLION. Do you still think our solar system will survive?"]
+    [:p.text-md.tracking-wide.font-display "Another perspective: The current diameter of the sun is 1.3927 million km. And in About 2.5 billion years later, it swells into a red giant, fusing helium internally. It will reach ~300 million km in diameter, engulfing Mercury, Venus, and possibly Earth, too. And if we do the math correctly thats 300 / 1.3927 ~ sun will be 216x times bigger in 2.5 BILLION years. Imagine if it grew 1Mx, what else would it engulf?"]
+    [:p.text-md.tracking-wide.font-display "Despite the super low prices of storage and memory, people are still building using technologies from the 1970s. Ofcourse there has been updates and new features - but not of the features address this core issue. And this is really affecting companies - mutable storage is a very bad foundation for building systems. And its just gets worse over time"]]])
+
+(defn module-6 []
+  [:section.mt-16
+   [:h1.text-xl.font-display.font-bold.text-center  "Recent Phenmenon"]
+   [:p.text-xs.font-display.text-center.text-gray-400  "source: https://www.investopedia.com/articles/08/accounting-history.asp"]
+   [:div.mt-8.space-y-7.max-w-4xl.leading-7
+    [:p.text-md.tracking-wide.font-display "Humans have been keeping immutable records for thousands of years - medical records, accounting ledgers, bank statements, bills are all immutable records of facts about an entity. This enttiy could be a person, or a couple or even an organization"]
+    [:p.text-md.tracking-wide.font-display "For example, lets at a look at accounting, the language of the business. Accounting is a tool used to solve the complexity of finance - accounting takes all the numbers and classify them. Every transaction is recorded twice (called double entry accounting system). But it always wasn't the case. Double Entry accounting system didnt exist 7000 years ago. Mesapotomians were the inventors of accounting but their usage was simple. The Mesopotamians used primitive accounting methods, keeping records that detailed transactions involving animals, livestock, and crops. Until the late 1400s, this information was arranged in a narrative style with all the numbers in a single column—whether an amount was paid, owed, or otherwise. This is called “single-entry” bookkeeping."]
+    [:p.text-md.tracking-wide.font-display "Here’s a sample of a bookkeeper’s single-entry system. You can see how the entries are laid out with a date, a description, and whether it was owed or received by the symbols in the amount column."]
+    [:img {:src "/img/single.png" :alt "Single Entry Accounting Example"}]
+    [:p.text-md.tracking-wide.font-display "The bookkeeper had to read the description of each entry to decide whether to deduct or add the amount when calculating something as simple as monthly profit or loss. This was a time-consuming and inefficient tallying method."]]
+   [:div.mt-8.space-y-7.max-w-4xl.leading-7
+     [:h2.text-md.tracking-wide.font-display.font-bold.mt-8 "The Mathematical Monk"]
+     [:p.text-md.tracking-wide.font-display "As part of the tradition of learned monks conducting high-level scientific and philosophical research in the 15th century, Italian monk Luca Pacioli revamped the common bookkeeping structure and laid the groundwork for modern accounting. Pacioli, who is commonly known as “the father of accounting,” published a textbook called “Summa de Arithmetica, Geometria, Proportioni et Proportionalita” in 1494, which showed the benefits of a double-entry system for bookkeeping."]
+     [:p.text-md.tracking-wide.font-display "The idea was to list an entity’s resources separately from any claims on those resources by other entities. In the simplest form, this meant creating a balance sheet with separate debits and credits. This innovation made bookkeeping more efficient and provided a clearer picture of a company’s overall strength. This record, however, was only for the owner who hired the bookkeeper. The general public had no access to such records—at least not yet."]
+     [:p.text-md.tracking-wide.font-display "Here is what the double-entry system may have looked like. You can see the two separate columns for debits and credits, along with the description of each transaction and how it was paid: cash or commodities. In this case, it was chickens, seeds, eggs, and furniture."]
+     [:img {:src "/img/double.png" :alt "Double Entry Accounting Example"}]]])
+
+
 (defn chapter-page [routes]
   (let [{{:keys [chapterId]} :path-params} routes]
     (if-let [{:keys [title]} (get book/book chapterId)]
@@ -104,5 +163,7 @@
       [module-1]
       [module-2]
       [module-3]
-      [module-4]]
+      [module-4]
+      [module-5]
+      [module-6]]
      [not-found-page])))
