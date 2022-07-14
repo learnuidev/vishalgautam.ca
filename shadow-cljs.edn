@@ -15,6 +15,8 @@
         :modules {:main {:init-fn app.core/main}}
         :output-dir "public/js"
         :target :browser
+        ; https://stackoverflow.com/questions/66344844/uncaught-typeerror-jscomp-inherits-is-not-a-function
+        :compiler-options {:output-feature-set :es6}
         :js-options {:resolve {"http2" false
                                "aws-crt" false}}}
   :test {:ns-regexp "app.cards"

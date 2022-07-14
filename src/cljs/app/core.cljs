@@ -16,8 +16,8 @@
             ; [app.view :refer [main-view]]))
 
 ;; configure aws
-(amp/configure-user-pool!)
-(amp/configure-appsync!)
+; (amp/configure-user-pool!)
+; (amp/configure-appsync!)
 
 
 (defn ^:dev/after-load render

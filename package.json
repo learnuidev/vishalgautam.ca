@@ -37,7 +37,6 @@
         "@testing-library/react": "^10.4.3",
         "autoprefixer": "^10.4.2",
         "aws-amplify": "^4.3.26",
-        "aws-amplify-react": "^5.1.9",
         "babel-loader": "8.2.2",
         "babel-plugin-module-resolver": "4.1.0",
         "babel-plugin-styled-components": "1.13.2",
@@ -60,6 +59,7 @@
         "zprint-clj": "~0.8.0"
     },
     "dependencies": {
+        "@aws-amplify/ui-react": "^3.1.0",
         "@headlessui/react": "^1.4.3",
         "@heroicons/react": "^1.0.5",
         "classnames": "^2.3.1",
